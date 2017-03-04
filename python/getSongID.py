@@ -5,7 +5,7 @@ import json
 spotify = spotipy.Spotify()
 
 #open songs.json
-with open('songs.json','r') as infile:
+with open('../JSONs/songs.json','r') as infile:
   songs = json.load(infile)
 
 for song in songs:
@@ -24,7 +24,7 @@ for song in songs:
   
 
 
-with open('songs.json','w') as outfile:
+with open('../JSONs/songs.json','w') as outfile:
   json.dump(songs,outfile,sort_keys=True,indent=2)
 
 

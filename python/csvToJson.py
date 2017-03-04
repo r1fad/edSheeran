@@ -1,8 +1,8 @@
 import csv
 import json
 
-csvfile = open('songs.csv', 'r')
-jsonfile = open('songs.json', 'w')
+csvfile = open('../JSONs/songs.csv', 'r')
+jsonfile = open('../JSONs/songs.json', 'w')
 
 fieldnames = ("id","lyrics","song","url","lyrics_vector","X","Y")
 reader = csv.DictReader( csvfile, fieldnames)

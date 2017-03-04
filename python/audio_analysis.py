@@ -10,7 +10,7 @@ spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
 #open songs.json
-with open('songs.json','r') as infile:
+with open('../JSONs/songs.json','r') as infile:
   songs = json.load(infile)
 
 #analyze each song 
@@ -23,6 +23,6 @@ for song in songs:
 
   song["sentiment_index"] = ((song["sentiment_score"]+song["valence"])*song["sentiment_magnitude"])/song["speechiness"]
 
-with open('songs.json','w') as outfile:
+with open('../JSONs/songs.json','w') as outfile:
   json.dump(songs,outfile,sort_keys=True,indent=2)
 

@@ -8,7 +8,7 @@ import unicodedata
 language_client = language.Client()
 
 #open songs.json
-with open('songs.json','r') as infile:
+with open('../JSONs/songs.json','r') as infile:
   songs = json.load(infile)
 
 # The text to analyze
@@ -26,5 +26,5 @@ for song in songs:
   print song['song']
   print song['sentiment_score']
 
-with open('songs.json','w') as outfile:
+with open('../JSONs/songs.json','w') as outfile:
   json.dump(songs,outfile,sort_keys=True,indent=2)
