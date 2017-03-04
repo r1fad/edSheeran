@@ -21,7 +21,7 @@ for song in songs:
   song["valence"]=features[0]["valence"]
   song ["speechiness"]=features[0]["speechiness"]
 
-  song["sentiment_index"] = ((song["sentiment_score"]*song["sentiment_magnitude"])-song["valence"])/song["speechiness"]
+  song["sentiment_index"] = ((song["sentiment_score"]*song["sentiment_magnitude"])+song["valence"])/song["speechiness"]
 
 with open('songs.json','w') as outfile:
   json.dump(songs,outfile,sort_keys=True,indent=2)

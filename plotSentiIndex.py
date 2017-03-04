@@ -10,7 +10,7 @@ D={}
 
 # a dictionary where key is the name of song and value is sentiment_index
 for song in songs:
-  D[song["song"]] = song["sentiment_index"]
+  D[song["song"]] = math.log(song["sentiment_index"]**2)
 
 plt.bar(range(len(D)), D.values(), align='center')
 
