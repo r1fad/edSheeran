@@ -146,8 +146,7 @@ d3.csv("JSONs/songs.csv", function(error, data) {
           tooltip.transition()
                .duration(200)
                .style("opacity", .9);
-          tooltip.html(d["song"] + "<br/> (" + xValue(d) 
-	        + ", " + yValue(d) + ")")
+          tooltip.html(d["song"])
                .style("left", (d3.event.pageX + 5) + "px")
                .style("top", (d3.event.pageY - 28) + "px");
       })
